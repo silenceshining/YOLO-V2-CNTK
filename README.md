@@ -1,7 +1,7 @@
 # YOLO-V2-CNTK
 YOLO V2 CNTK
 
-## Gernal Things
+## General Things
 
 This is my current try to implement YOLO V2 with CNTK. It doesn't work yet.
 
