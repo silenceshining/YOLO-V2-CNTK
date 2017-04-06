@@ -46,7 +46,7 @@ If for example there only exists one box, like in image index 1 above, all other
 
 ### Class Numbers
 
-The class numbers are encoded from 0 to 19 in the order:
+The classes are encoded with numbers from 0 to 19 in the order:
 
      person, bird, cat, cow, dog, horse, sheep, aeroplane, bicycle, boat, bus, car, motorbike, train, bottle, chair, diningtable, pottedplant, sofa, tvmonitor
      
