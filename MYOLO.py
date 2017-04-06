@@ -1,32 +1,23 @@
 from __future__ import print_function
-from cntk import Trainer, UnitType, load_model
 from cntk.layers import Placeholder, Constant, Activation, Sequential, Dense, Convolution, MaxPooling
-from cntk.graph import find_by_name, plot
-from cntk.initializer import glorot_uniform
 from cntk.io import ImageDeserializer, CTFDeserializer
-from cntk.learner import momentum_sgd, learning_rate_schedule, momentum_as_time_constant_schedule
-from cntk.ops import input_variable, parameter, cross_entropy_with_softmax, classification_error, times, combine
-from cntk.ops import roipooling
-from cntk.ops.functions import CloneMethod
-from cntk.utils import log_number_of_parameters, ProgressPrinter
 import cntk
-import numpy as npt
+
 import os, sys
 from cntk.utils import *
 from cntk.ops import *
 import cntk.io.transforms as xforms
-from cntk.distributed import data_parallel_distributed_learner, Communicator
+
 from cntk.io import ImageDeserializer, MinibatchSource, StreamDef, StreamDefs, FULL_DATA_SWEEP
 from cntk.layers import Placeholder,  BatchNormalization,Convolution2D, Activation, MaxPooling, Dense, Dropout, default_options, \
     Sequential
 
-from cntk.axis import *
 
 from Logic.Bbox import Bbox
 from Logic.YOLOError import YOLOError
 from Logic.AnchorBox import AnchorBoxScale
 from cntk.debugging import debug
-from scipy import misc
+
 
 def create_mb_source(img_height, img_width, img_channels, output_size, image_file, roi_file):
     transforms = []
