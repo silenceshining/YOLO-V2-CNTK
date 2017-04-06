@@ -38,8 +38,9 @@ and maps the pictures.
 which encodes the rois and classes. In one row there 100 entries. This is due to the fact that a box/roi is described through
     
     (class number, x, y, w, h) => 5 entries per box
+    (x,y) is the center point of each box and NOT the top left corner
 
-and for one image there should be no more that 20 boxes. So we have 5 * 20 = 100. I did this because as far as i know the CTF reader needs a fixed wor length.
+and for one image there should be no more that 20 boxes. So we have 5 * 20 = 100. I did this because as far as i know the CTF reader needs a fixed row length.
 
 If for example there only exists one box, like in image index 1 above, all other 19 class numbers are set to -1 to indicate that. 
 
